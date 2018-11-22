@@ -53,6 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\PlayerAndEnemy\PlayerMouseFacing.cs" />
+     <Compile Include="Assets\Scripts\PlayerAndEnemy\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\Weapon\BulletWeaponPart.cs" />
      <Compile Include="Assets\Scripts\Weapon\ImpactWeaponPart.cs" />
      <Compile Include="Assets\Scripts\Weapon\StatWeaponPart.cs" />
