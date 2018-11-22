@@ -4,26 +4,24 @@ using UnityEngine;
 
 public class ImpactWeaponPart : WeaponEquipmentPart
 {
+    public ModEffect Effect;
+    public GameObject ParticleEffect;
+    public Sprite EffectSprite;
 
-    // Use this for initialization
-    void Start()
+    public override void OnRelease()
     {
+        Debug.Log("Is releasing");
+        EquipmentUi.ReleasedEquipmentPart(Id, WeaponPartType.Impact, this);
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnFire(Transform firePosition, float damage)
     {
-
-    }
-
-    public override void OnImpact()
-    {
-
-    }
-
-    public override void OnFire()
-    {
-
+        Debug.Log(firePosition.position);
+        GameObject g = Instantiate(ParticleEffect, firePosition);
+        g.transform.localPosition = Vector3.zero;
+        g.GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, EffectSprite);
+        g.GetComponent<ImpactParticle>().damage = damage;
+        g.GetComponent<ImpactParticle>().effect = Effect;
     }
 }

@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4403345297328172}
-  - component: {fileID: 114205362028817142}
+  - component: {fileID: 114129985110952438}
   m_Layer: 0
   m_Name: IceBulletMod
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114205362028817142
+--- !u!114 &114129985110952438
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,5 +55,8 @@ MonoBehaviour:
   WeaponPartType: 1
   EquipmentUi: {fileID: 0}
   Id: 0
-  DragAble: 1
+  Name: Ice
   WeaponPartImage: {fileID: 0}
+  Effect: 3
+  Bullet: {fileID: 1913856821789234, guid: fdd5c7b76921b454cbf45d951f3e715d, type: 2}
+  BulletSpeed: 150

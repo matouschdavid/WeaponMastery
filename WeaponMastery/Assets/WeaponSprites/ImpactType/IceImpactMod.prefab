@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4596527597756636}
-  - component: {fileID: 114090165973551796}
+  - component: {fileID: 114108493403939144}
   m_Layer: 0
   m_Name: IceImpactMod
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114090165973551796
+--- !u!114 &114108493403939144
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,12 +48,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1394326134181584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1340196f3f9700f48a71c533d0c15e2f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bc6dc591dfe7d34e874d9631698c28c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponPartSprite: {fileID: 21300000, guid: 7d56cc7cb8de6df4786ae9fd7035b959, type: 3}
   WeaponPartType: 2
   EquipmentUi: {fileID: 0}
-  Id: 0
-  DragAble: 1
+  Id: 2
+  Name: Ice
   WeaponPartImage: {fileID: 0}
+  Effect: 3
+  ParticleEffect: {fileID: 1998409168385122, guid: 2eaf08dfac2c5c845a024b2d97372f3c,
+    type: 2}
+  EffectSprite: {fileID: 21300000, guid: e03bcecdeb680c44aa90a21c81d5436f, type: 3}

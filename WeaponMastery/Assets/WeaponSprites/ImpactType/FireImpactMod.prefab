@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4952388955412466}
-  - component: {fileID: 114768057635487698}
+  - component: {fileID: 114978208695670512}
   m_Layer: 0
   m_Name: FireImpactMod
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114768057635487698
+--- !u!114 &114978208695670512
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,12 +48,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1819583720459188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1340196f3f9700f48a71c533d0c15e2f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bc6dc591dfe7d34e874d9631698c28c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponPartSprite: {fileID: 21300000, guid: 34c04326979032c45869ec4c6374c1a1, type: 3}
   WeaponPartType: 2
   EquipmentUi: {fileID: 0}
-  Id: 0
-  DragAble: 1
+  Id: 1
+  Name: Fire
   WeaponPartImage: {fileID: 0}
+  Effect: 0
+  ParticleEffect: {fileID: 1998409168385122, guid: 2eaf08dfac2c5c845a024b2d97372f3c,
+    type: 2}
+  EffectSprite: {fileID: 21300000, guid: dbe0a3e29118291439847ff4ea54a0f2, type: 3}

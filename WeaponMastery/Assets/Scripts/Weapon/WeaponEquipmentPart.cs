@@ -7,6 +7,7 @@ public class WeaponEquipmentPart : MonoBehaviour
     public WeaponPartType WeaponPartType;
     public WeaponEquipmentUI EquipmentUi;
     public int Id;
+    public string Name;
 
     public Image WeaponPartImage;
 
@@ -26,12 +27,10 @@ public class WeaponEquipmentPart : MonoBehaviour
         transform.position = Input.mousePosition;
     }
 
-    public void OnRelease()
+    public virtual void OnRelease()
     {
 
-        Debug.Log("Is releasing");
-        EquipmentUi.ReleasedEquipmentPart(this);
-
+        
 
     }
 

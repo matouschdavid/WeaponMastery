@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4006288717073902}
-  - component: {fileID: 114279381146025200}
+  - component: {fileID: 114046835599708220}
   m_Layer: 0
   m_Name: ExplosionImpactMod
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114279381146025200
+--- !u!114 &114046835599708220
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,12 +48,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1899725091474146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1340196f3f9700f48a71c533d0c15e2f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bc6dc591dfe7d34e874d9631698c28c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponPartSprite: {fileID: 21300000, guid: 79a9cabac8a2d6c429a050ac8d1799f2, type: 3}
   WeaponPartType: 2
   EquipmentUi: {fileID: 0}
   Id: 0
-  DragAble: 1
+  Name: Explosion
   WeaponPartImage: {fileID: 0}
+  Effect: 1
+  ParticleEffect: {fileID: 1641551046679904, guid: 2eaf08dfac2c5c845a024b2d97372f3c,
+    type: 2}
+  EffectSprite: {fileID: 0}

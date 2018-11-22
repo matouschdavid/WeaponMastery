@@ -4,26 +4,12 @@ using UnityEngine;
 
 public class StatWeaponPart : WeaponEquipmentPart
 {
-
-    // Use this for initialization
-    void Start()
+    public float AttackSpeed;
+    public float AttackDamage;
+    public override void OnRelease()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public override void OnImpact()
-    {
-
-    }
-
-    public override void OnFire()
-    {
+        Debug.Log("Is releasing");
+        EquipmentUi.ReleasedEquipmentPart(Id, WeaponPartType.Stat, this);
 
     }
 }

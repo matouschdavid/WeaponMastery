@@ -1,21 +1,38 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public WeaponEquipmentPart StatEquipmentPart;
+    public StatWeaponPart StatEquipmentPart;
 
-    public WeaponEquipmentPart BulletEquipmentPart;
+    public BulletWeaponPart BulletEquipmentPart;
 
-    public WeaponEquipmentPart ImpactEquipmentPart;
+    public ImpactWeaponPart ImpactEquipmentPart;
+
+    public Transform FirePosition;
+
+    private float lastFire = 0;
 	// Use this for initialization
 	void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+	{
+	    lastFire += Time.deltaTime;
+	    if (Input.GetKeyDown(KeyCode.Space) && lastFire >= StatEquipmentPart.AttackSpeed)
+	    {
+	        lastFire = 0;
+	        Shoot();
+	    }
 	}
+
+    private void Shoot()
+    {
+        Debug.Log("Weapondamage: " + StatEquipmentPart.AttackDamage);
+        BulletEquipmentPart.OnFire(FirePosition, StatEquipmentPart.AttackDamage, ImpactEquipmentPart);
+    }
 }
