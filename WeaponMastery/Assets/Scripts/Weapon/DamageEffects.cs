@@ -37,6 +37,7 @@ public class DamageEffects : MonoBehaviour
         for (int i = 0; i < ticks; i++)
         {
             Debug.Log("Ticks: " + ticks);
+            target.Health = 100;
             target.Health -= damage;
             GameObject t = Instantiate<GameObject>(Resources.Load<GameObject>("DamageText"), target.transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0), Quaternion.identity);
             t.transform.SetParent(target.transform);

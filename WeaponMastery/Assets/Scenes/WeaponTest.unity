@@ -695,6 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1878a6cd224142b4999781614eff7dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 5
 --- !u!114 &610044928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -829,6 +830,10 @@ Prefab:
     - target: {fileID: 4877459659732176, guid: dd4492b803b54e048aa720d3f404f522, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1864826643017012, guid: dd4492b803b54e048aa720d3f404f522, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd4492b803b54e048aa720d3f404f522, type: 2}
@@ -985,6 +990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1878a6cd224142b4999781614eff7dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 5
 --- !u!114 &1177283884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1409,6 +1415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1878a6cd224142b4999781614eff7dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 5
 --- !u!114 &2101229172
 MonoBehaviour:
   m_ObjectHideFlags: 0
