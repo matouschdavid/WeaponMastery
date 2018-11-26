@@ -180,7 +180,7 @@ public class WeaponEquipmentUI : MonoBehaviour
         {
             weaponEquipmentPart.gameObject.transform.SetParent(StatSlot.transform);
             weaponEquipmentPart.transform.localPosition = Vector3.zero;
-            weaponEquipmentPart.transform.localScale = Vector3.one * 1.3f;
+            weaponEquipmentPart.transform.localScale = Vector3.one * 3;
             Weapon.StatEquipmentPart = StatEquipmentParts[id];
             weaponEquipmentPart.WeaponPartImage.raycastTarget = false;
 
@@ -189,7 +189,7 @@ public class WeaponEquipmentUI : MonoBehaviour
         {
             weaponEquipmentPart.gameObject.transform.SetParent(BulletSlot.transform);
             weaponEquipmentPart.transform.localPosition = Vector3.zero;
-            weaponEquipmentPart.transform.localScale = Vector3.one * 1.3f;
+            weaponEquipmentPart.transform.localScale = Vector3.one * 3;
             Weapon.BulletEquipmentPart = BulletEquipmentParts[id];
             weaponEquipmentPart.WeaponPartImage.raycastTarget = false;
 
@@ -198,7 +198,7 @@ public class WeaponEquipmentUI : MonoBehaviour
         {
             weaponEquipmentPart.gameObject.transform.SetParent(ImpactSlot.transform);
             weaponEquipmentPart.transform.localPosition = Vector3.zero;
-            weaponEquipmentPart.transform.localScale = Vector3.one * 1.3f;
+            weaponEquipmentPart.transform.localScale = Vector3.one * 3;
             Weapon.ImpactEquipmentPart = ImpactEquipmentParts[id];
             weaponEquipmentPart.WeaponPartImage.raycastTarget = false;
 

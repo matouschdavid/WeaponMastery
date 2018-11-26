@@ -9,6 +9,7 @@ TagManager:
   - StatModSlot
   - BulletModSlot
   - ImpactModSlot
+  - Enemy
   layers:
   - Default
   - TransparentFX

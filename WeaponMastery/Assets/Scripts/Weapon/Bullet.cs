@@ -41,6 +41,9 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision2D)
     {
+        
+        if (collision2D.gameObject.tag != "Enemy")
+            return;
         sr.enabled = false;
         GetComponent<Collider2D>().enabled = false;
         if (effect == ModEffect.Fire)

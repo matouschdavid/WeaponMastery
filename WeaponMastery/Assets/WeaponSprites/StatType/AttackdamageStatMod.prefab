@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239f78d335711a943a85b603f0d5bbdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponPartSprite: {fileID: 21300000, guid: 8efd58ee9fe0e094cab5d39d066c14e7, type: 3}
+  WeaponPartSprite: {fileID: 21300000, guid: 8029681b3a5c191458d10d388027f171, type: 3}
   WeaponPartType: 0
   EquipmentUi: {fileID: 0}
   Id: 0
