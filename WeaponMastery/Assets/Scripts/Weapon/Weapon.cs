@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour
 	void Update ()
 	{
 	    lastFire += Time.deltaTime;
-	    if (Input.GetKeyDown(KeyCode.Space) && lastFire >= StatEquipmentPart.AttackSpeed)
+	    if (Input.GetMouseButton(0) && lastFire >= StatEquipmentPart.AttackSpeed)
 	    {
 	        lastFire = 0;
 	        Shoot();

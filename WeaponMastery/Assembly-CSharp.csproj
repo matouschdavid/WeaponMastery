@@ -53,6 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Enemys\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Enemys\ShooterController.cs" />
+     <Compile Include="Assets\Scripts\Enemys\SprinterController.cs" />
      <Compile Include="Assets\Scripts\PlayerAndEnemy\PlayerFacing.cs" />
      <Compile Include="Assets\Scripts\PlayerAndEnemy\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerAndEnemy\WeaponMouseFacing.cs" />
@@ -60,11 +63,11 @@
      <Compile Include="Assets\Scripts\Weapon\Bullet.cs" />
      <Compile Include="Assets\Scripts\Weapon\BulletWeaponPart.cs" />
      <Compile Include="Assets\Scripts\Weapon\DamageEffects.cs" />
-     <Compile Include="Assets\Scripts\Weapon\EnemyController.cs" />
      <Compile Include="Assets\Scripts\Weapon\HealthController.cs" />
      <Compile Include="Assets\Scripts\Weapon\ImpactParticle.cs" />
      <Compile Include="Assets\Scripts\Weapon\ImpactWeaponPart.cs" />
      <Compile Include="Assets\Scripts\Weapon\MenuController.cs" />
+     <Compile Include="Assets\Scripts\Weapon\Projectile.cs" />
      <Compile Include="Assets\Scripts\Weapon\StatWeaponPart.cs" />
      <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
      <Compile Include="Assets\Scripts\Weapon\WeaponEquipment.cs" />
