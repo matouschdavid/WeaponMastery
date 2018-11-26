@@ -347,6 +347,61 @@ Prefab:
       propertyPath: Weapon
       value: 
       objectReference: {fileID: 179054472}
+    - target: {fileID: 224618008744613938, guid: ef90fd314c1f3e44eb0d5ecf15a148aa,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224618008744613938, guid: ef90fd314c1f3e44eb0d5ecf15a148aa,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224026736886004212, guid: ef90fd314c1f3e44eb0d5ecf15a148aa,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 224063145967766408, guid: ef90fd314c1f3e44eb0d5ecf15a148aa,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665724026439472, guid: ef90fd314c1f3e44eb0d5ecf15a148aa,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 224063145967766408, guid: ef90fd314c1f3e44eb0d5ecf15a148aa,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224026736886004212, guid: ef90fd314c1f3e44eb0d5ecf15a148aa,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224063145967766408, guid: ef90fd314c1f3e44eb0d5ecf15a148aa,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224026736886004212, guid: ef90fd314c1f3e44eb0d5ecf15a148aa,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224063145967766408, guid: ef90fd314c1f3e44eb0d5ecf15a148aa,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224026736886004212, guid: ef90fd314c1f3e44eb0d5ecf15a148aa,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef90fd314c1f3e44eb0d5ecf15a148aa, type: 2}
   m_IsPrefabAsset: 0
