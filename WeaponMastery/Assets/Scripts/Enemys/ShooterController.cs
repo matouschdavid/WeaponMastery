@@ -33,6 +33,8 @@ public class ShooterController : EnemyController {
 
             if (timeBtwShots <= 0) {
 
+                //float angle = Mathf.Atan2(target.position.y, target.position.x) * Mathf.Rad2Deg;
+                //GameObject bullet = Instantiate(projectile, transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
                 GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity);
                 bullet.GetComponent<Projectile>().damage = damage;
                 timeBtwShots = StartTimeBtwShots;

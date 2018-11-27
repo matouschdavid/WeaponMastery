@@ -30,8 +30,6 @@ public class Projectile : MonoBehaviour {
 
     void Update() {
 
-        
-
         if (range <= 0) {
             DestroyProjectile();
         } else {
