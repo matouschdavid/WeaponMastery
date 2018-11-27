@@ -112,7 +112,7 @@ public class WeaponEquipmentUI : MonoBehaviour
     {
         foreach (var wep in GameObject.FindGameObjectsWithTag("WeaponEquipmentPartUI"))
         {
-            if (wep.transform.parent.gameObject == OptionsGrid.gameObject)
+            if (wep.transform.parent == null || wep.transform.parent.gameObject == OptionsGrid.gameObject)
                 Destroy(wep);
         }
         int i = 0;
@@ -123,7 +123,7 @@ public class WeaponEquipmentUI : MonoBehaviour
                 GameObject g = Instantiate(StatPartTemplate);
                 g.transform.SetParent(OptionsGrid);
                 g.transform.localPosition = Vector3.zero;
-                g.transform.localScale = Vector3.one;
+                g.transform.localScale = Vector3.one * 2;
                 g.GetComponent<WeaponEquipmentPart>().Id = i;
                 g.GetComponent<WeaponEquipmentPart>().EquipmentUi = this;
                 g.GetComponent<WeaponEquipmentPart>().WeaponPartImage.sprite = weaponEquipmentPart.WeaponPartSprite;
@@ -141,7 +141,7 @@ public class WeaponEquipmentUI : MonoBehaviour
                 GameObject g = Instantiate(BulletPartTemplate);
                 g.transform.SetParent(OptionsGrid);
                 g.transform.localPosition = Vector3.zero;
-                g.transform.localScale = Vector3.one;
+                g.transform.localScale = Vector3.one * 2;
                 g.GetComponent<WeaponEquipmentPart>().Id = i;
                 g.GetComponent<WeaponEquipmentPart>().EquipmentUi = this;
                 g.GetComponent<WeaponEquipmentPart>().WeaponPartImage.sprite = weaponEquipmentPart.WeaponPartSprite;
@@ -159,7 +159,7 @@ public class WeaponEquipmentUI : MonoBehaviour
                 GameObject g = Instantiate(ImpactPartTemplate);
                 g.transform.SetParent(OptionsGrid);
                 g.transform.localPosition = Vector3.zero;
-                g.transform.localScale = Vector3.one;
+                g.transform.localScale = Vector3.one * 2;
                 g.GetComponent<WeaponEquipmentPart>().Id = i;
                 g.GetComponent<WeaponEquipmentPart>().EquipmentUi = this;
                 g.GetComponent<WeaponEquipmentPart>().WeaponPartImage.sprite = weaponEquipmentPart.WeaponPartSprite;
@@ -178,6 +178,7 @@ public class WeaponEquipmentUI : MonoBehaviour
         Debug.Log(id + "  " + type);
         if (Vector2.Distance(weaponEquipmentPart.transform.position, StatSlot.transform.position) <= DragThreshHold && type == WeaponPartType.Stat)
         {
+            StatSlot.transform.DetachChildren();
             weaponEquipmentPart.gameObject.transform.SetParent(StatSlot.transform);
             weaponEquipmentPart.transform.localPosition = Vector3.zero;
             weaponEquipmentPart.transform.localScale = Vector3.one * 3;
@@ -187,6 +188,7 @@ public class WeaponEquipmentUI : MonoBehaviour
         }
         else if (Vector2.Distance(weaponEquipmentPart.transform.position, BulletSlot.transform.position) <= DragThreshHold && type == WeaponPartType.Bullet)
         {
+            BulletSlot.transform.DetachChildren();
             weaponEquipmentPart.gameObject.transform.SetParent(BulletSlot.transform);
             weaponEquipmentPart.transform.localPosition = Vector3.zero;
             weaponEquipmentPart.transform.localScale = Vector3.one * 3;
@@ -196,6 +198,7 @@ public class WeaponEquipmentUI : MonoBehaviour
         }
         else if (Vector2.Distance(weaponEquipmentPart.transform.position, ImpactSlot.transform.position) <= DragThreshHold && type == WeaponPartType.Impact)
         {
+            ImpactSlot.transform.DetachChildren();
             weaponEquipmentPart.gameObject.transform.SetParent(ImpactSlot.transform);
             weaponEquipmentPart.transform.localPosition = Vector3.zero;
             weaponEquipmentPart.transform.localScale = Vector3.one * 3;
@@ -207,7 +210,7 @@ public class WeaponEquipmentUI : MonoBehaviour
         {
             weaponEquipmentPart.transform.SetParent(OptionsGrid);
         }
-
+        Weapon.UpdateWeapon();
         PlayerPrefs.SetString("Weapon", Weapon.StatEquipmentPart.Name + "|" + Weapon.BulletEquipmentPart.Name + "|" + Weapon.ImpactEquipmentPart.Name);
         ShowAvailableParts();
 
@@ -215,6 +218,7 @@ public class WeaponEquipmentUI : MonoBehaviour
 
     public void ChangeSelection(string newType)
     {
+        Debug.Log(newType);
         CurrentWeaponPartType = newType == "Bullet" ? WeaponPartType.Bullet : newType == "Impact" ? WeaponPartType.Impact : WeaponPartType.Stat;
         ShowAvailableParts();
     }
