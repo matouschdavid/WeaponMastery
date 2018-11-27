@@ -57,5 +57,5 @@ MonoBehaviour:
   Id: 0
   Name: Attackdamage
   WeaponPartImage: {fileID: 0}
-  AttackSpeed: 1
+  AttackSpeed: 0.3
   AttackDamage: 20

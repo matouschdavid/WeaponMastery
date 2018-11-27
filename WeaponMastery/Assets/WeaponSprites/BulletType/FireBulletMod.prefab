@@ -58,5 +58,5 @@ MonoBehaviour:
   Name: Fire
   WeaponPartImage: {fileID: 0}
   Effect: 0
-  Bullet: {fileID: 1913856821789234, guid: fdd5c7b76921b454cbf45d951f3e715d, type: 2}
-  BulletSpeed: 100
+  Bullet: {fileID: 1462227166822810, guid: 31f1cda4d59fc9c439fa8e373b734700, type: 2}
+  BulletSpeed: 300

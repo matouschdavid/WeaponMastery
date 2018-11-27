@@ -220,6 +220,16 @@ Prefab:
       propertyPath: Weapon
       value: 
       objectReference: {fileID: 399670710}
+    - target: {fileID: 224618008744613938, guid: ef90fd314c1f3e44eb0d5ecf15a148aa,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224618008744613938, guid: ef90fd314c1f3e44eb0d5ecf15a148aa,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef90fd314c1f3e44eb0d5ecf15a148aa, type: 2}
   m_IsPrefabAsset: 0
@@ -374,6 +384,34 @@ Prefab:
     - target: {fileID: 4877459659732176, guid: dd4492b803b54e048aa720d3f404f522, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333577688656500, guid: dd4492b803b54e048aa720d3f404f522, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333577688656500, guid: dd4492b803b54e048aa720d3f404f522, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333577688656500, guid: dd4492b803b54e048aa720d3f404f522, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333577688656500, guid: dd4492b803b54e048aa720d3f404f522, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333577688656500, guid: dd4492b803b54e048aa720d3f404f522, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.2909992
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333577688656500, guid: dd4492b803b54e048aa720d3f404f522, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333577688656500, guid: dd4492b803b54e048aa720d3f404f522, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.00000040605664
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd4492b803b54e048aa720d3f404f522, type: 2}

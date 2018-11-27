@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 114504139708143462}
   - component: {fileID: 114164686317789654}
   - component: {fileID: 114490507750879618}
-  - component: {fileID: 114380393453073754}
   m_Layer: 5
   m_Name: WeaponEquipmentUI
   m_TagString: Untagged
@@ -197,35 +196,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
---- !u!114 &114380393453073754
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1046356548783126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cffaa9718d797b4f97fca7dd2fa9f3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UiCommands:
-  - KeyToPress: 27
-    Event:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 114380393453073754}
-          m_MethodName: ChangeUI
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1046356548783126}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!114 &114385111371555856
 MonoBehaviour:
   m_ObjectHideFlags: 1
