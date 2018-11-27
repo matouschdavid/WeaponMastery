@@ -109,7 +109,11 @@ MonoBehaviour:
   WeaponPartType: 0
   EquipmentUi: {fileID: 0}
   Id: 0
+  Name: 
   WeaponPartImage: {fileID: 114526676984263260}
+  Effect: 0
+  ParticleEffect: {fileID: 0}
+  EffectSprite: {fileID: 0}
 --- !u!114 &114526676984263260
 MonoBehaviour:
   m_ObjectHideFlags: 1

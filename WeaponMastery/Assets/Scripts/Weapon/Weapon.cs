@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+
+    public SpriteRenderer StatSprite;
+    public SpriteRenderer BulletSprite;
+    public SpriteRenderer ImpactSprite;
+
     public StatWeaponPart StatEquipmentPart;
 
     public BulletWeaponPart BulletEquipmentPart;
@@ -34,5 +39,12 @@ public class Weapon : MonoBehaviour
     {
         Debug.Log("Weapondamage: " + StatEquipmentPart.AttackDamage);
         BulletEquipmentPart.OnFire(FirePosition, StatEquipmentPart.AttackDamage, ImpactEquipmentPart);
+    }
+
+    public void UpdateWeapon()
+    {
+        StatSprite.sprite = StatEquipmentPart.WeaponPartSprite;
+        BulletSprite.sprite = BulletEquipmentPart.WeaponPartSprite;
+        ImpactSprite.sprite = ImpactEquipmentPart.WeaponPartSprite;
     }
 }
