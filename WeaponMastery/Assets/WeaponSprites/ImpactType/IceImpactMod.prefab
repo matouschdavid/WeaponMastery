@@ -58,6 +58,6 @@ MonoBehaviour:
   Name: Ice
   WeaponPartImage: {fileID: 0}
   Effect: 3
-  ParticleEffect: {fileID: 1998409168385122, guid: 2eaf08dfac2c5c845a024b2d97372f3c,
+  ParticleEffect: {fileID: 1193965114461688, guid: 95106c960b7c95e459834cc0162bc52a,
     type: 2}
   EffectSprite: {fileID: 21300000, guid: e03bcecdeb680c44aa90a21c81d5436f, type: 3}

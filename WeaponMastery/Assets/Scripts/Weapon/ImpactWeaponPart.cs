@@ -15,13 +15,13 @@ public class ImpactWeaponPart : WeaponEquipmentPart
 
     }
 
-    public void OnFire(Transform firePosition, float damage)
+    public void OnFire(Transform firePosition, float damage, float speed, Collider2D enemy)
     {
         Debug.Log(firePosition.position);
         GameObject g = Instantiate(ParticleEffect, firePosition);
+        
         g.transform.localPosition = Vector3.zero;
-        g.GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, EffectSprite);
-        g.GetComponent<ImpactParticle>().damage = damage;
-        g.GetComponent<ImpactParticle>().effect = Effect;
+        g.transform.parent = null;
+        g.GetComponent<ImpactParticle>().Fire(Effect, speed, damage, enemy);
     }
 }

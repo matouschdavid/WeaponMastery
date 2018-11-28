@@ -54,9 +54,9 @@ MonoBehaviour:
   WeaponPartSprite: {fileID: 21300000, guid: 56510ee789905484eb1a46336a33807e, type: 3}
   WeaponPartType: 1
   EquipmentUi: {fileID: 0}
-  Id: 0
+  Id: 2
   Name: Toxic
   WeaponPartImage: {fileID: 0}
   Effect: 2
-  Bullet: {fileID: 1913856821789234, guid: fdd5c7b76921b454cbf45d951f3e715d, type: 2}
-  BulletSpeed: 180
+  Bullet: {fileID: 1255031162295072, guid: aa0cea83b62e11e48af07f9e402b1b01, type: 2}
+  BulletSpeed: 500
