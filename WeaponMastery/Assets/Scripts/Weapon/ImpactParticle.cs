@@ -8,7 +8,7 @@ public class ImpactParticle : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, 1f);
     }
 
     public void Fire(ModEffect effect, float speed, float damage, Collider2D enemy)

@@ -123,7 +123,7 @@ public class WeaponEquipmentUI : MonoBehaviour
                 GameObject g = Instantiate(StatPartTemplate);
                 g.transform.SetParent(OptionsGrid);
                 g.transform.localPosition = Vector3.zero;
-                g.transform.localScale = Vector3.one * 2;
+                g.transform.localScale = Vector3.one;
                 g.GetComponent<WeaponEquipmentPart>().Id = i;
                 g.GetComponent<WeaponEquipmentPart>().EquipmentUi = this;
                 g.GetComponent<WeaponEquipmentPart>().WeaponPartImage.sprite = weaponEquipmentPart.WeaponPartSprite;
@@ -141,7 +141,7 @@ public class WeaponEquipmentUI : MonoBehaviour
                 GameObject g = Instantiate(BulletPartTemplate);
                 g.transform.SetParent(OptionsGrid);
                 g.transform.localPosition = Vector3.zero;
-                g.transform.localScale = Vector3.one * 2;
+                g.transform.localScale = Vector3.one;
                 g.GetComponent<WeaponEquipmentPart>().Id = i;
                 g.GetComponent<WeaponEquipmentPart>().EquipmentUi = this;
                 g.GetComponent<WeaponEquipmentPart>().WeaponPartImage.sprite = weaponEquipmentPart.WeaponPartSprite;
@@ -159,7 +159,7 @@ public class WeaponEquipmentUI : MonoBehaviour
                 GameObject g = Instantiate(ImpactPartTemplate);
                 g.transform.SetParent(OptionsGrid);
                 g.transform.localPosition = Vector3.zero;
-                g.transform.localScale = Vector3.one * 2;
+                g.transform.localScale = Vector3.one;
                 g.GetComponent<WeaponEquipmentPart>().Id = i;
                 g.GetComponent<WeaponEquipmentPart>().EquipmentUi = this;
                 g.GetComponent<WeaponEquipmentPart>().WeaponPartImage.sprite = weaponEquipmentPart.WeaponPartSprite;
