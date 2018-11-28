@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1391174358890148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.643465, y: 2.9359956, z: 0}
+  m_LocalPosition: {x: 2.85, y: 6.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,9 +54,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   damage: 25
-  Speed: 12
+  Speed: 5
   Explosion: {fileID: 1929687826720736, guid: a4a5ed866e204064daec49251f9a79df, type: 2}
-  SpottDistance: 20
+  SpottDistance: 10
 --- !u!212 &212645700430942120
 SpriteRenderer:
   m_ObjectHideFlags: 1
