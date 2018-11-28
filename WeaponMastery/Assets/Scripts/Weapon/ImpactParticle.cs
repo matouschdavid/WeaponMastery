@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class ImpactParticle : MonoBehaviour
 {
-    public float damage;
-    public ModEffect effect;
+    public Bullet[] bullets;
 
-    void OnParticleCollision(GameObject other)
+    void Start()
     {
-        Debug.Log("Here");
-        if (effect == ModEffect.Fire)
-            StartCoroutine(DamageEffects.FireDamage(null, damage / 2, 3, 0.5f,
-                other.GetComponent<HealthController>()));
-        if (effect == ModEffect.Toxic)
-            StartCoroutine(DamageEffects.ToxicDamage(null, damage / 3, 5, 0.5f,
-                other.GetComponent<HealthController>()));
-        if (effect == ModEffect.Ice)
-            StartCoroutine(DamageEffects.IceDamage(null, damage, 2,
-                other.GetComponent<HealthController>(), other.GetComponent<EnemyController>()));
+        Destroy(gameObject, 0.5f);
+    }
+
+    public void Fire(ModEffect effect, float speed, float damage, Collider2D enemy)
+    {
+        foreach (var bullet in bullets)
+        {
+            bullet.Fire(effect, speed, damage, enemy: enemy);
+        }
     }
 }
