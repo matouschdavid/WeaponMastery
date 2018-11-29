@@ -34,9 +34,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1512325739397956}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.11, y: -1.34, z: 2.64}
-  m_LocalScale: {x: 59.799606, y: 59.799606, z: 59.799606}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -20.260584, y: -0.8227786, z: 3.7421768}
+  m_LocalScale: {x: 115.08438, y: 115.08444, z: 115.08444}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -665,7 +665,7 @@ ParticleSystem:
     serializedVersion: 5
     enabled: 1
     type: 4
-    angle: 20.8
+    angle: 14.74
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -754,7 +754,7 @@ ParticleSystem:
     arc:
       value: 0
       mode: 0
-      spread: 1
+      spread: 0
       speed:
         serializedVersion: 2
         minMaxState: 0

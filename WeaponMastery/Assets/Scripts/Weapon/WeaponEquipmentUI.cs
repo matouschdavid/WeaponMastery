@@ -11,6 +11,8 @@ public class WeaponEquipmentUI : MonoBehaviour
 
     public Weapon Weapon;
 
+    public PlayerMovement Player;
+
     public GameObject StatSlot;
 
     public GameObject BulletSlot;
@@ -35,7 +37,11 @@ public class WeaponEquipmentUI : MonoBehaviour
 
     void OnEnable()
     {
-        Time.timeScale = 0.05f;
+        //Time.timeScale = 0.05f;
+        Player.GetComponent<Animator>().SetTrigger("ChangeToLoadout");
+        Weapon.CanShoot = false;
+        
+        Player.enabled = false;
         string weapon = PlayerPrefs.GetString("Weapon");
         string[] partNames = weapon.Split('|');
         Debug.Log(weapon);
@@ -100,12 +106,15 @@ public class WeaponEquipmentUI : MonoBehaviour
         g.transform.localPosition = Vector3.zero;
         g.GetComponent<WeaponEquipmentPart>().WeaponPartImage.sprite = ImpactEquipmentParts[Weapon.ImpactEquipmentPart.Id].WeaponPartSprite;
         ReleasedEquipmentPart(Weapon.ImpactEquipmentPart.Id, WeaponPartType.Impact, g.GetComponent<WeaponEquipmentPart>());
+        Weapon.UpdateWeapon();
         ShowAvailableParts();
     }
 
     void OnDisable()
     {
-        Time.timeScale = 1;
+        Player.GetComponent<Animator>().SetTrigger("ChangeFromLoadout");
+        Weapon.CanShoot = true;
+        Player.enabled = true;
     }
 
     void ShowAvailableParts()
@@ -113,7 +122,9 @@ public class WeaponEquipmentUI : MonoBehaviour
         foreach (var wep in GameObject.FindGameObjectsWithTag("WeaponEquipmentPartUI"))
         {
             if (wep.transform.parent == null || wep.transform.parent.gameObject == OptionsGrid.gameObject)
+            {
                 Destroy(wep);
+            }
         }
         int i = 0;
         if (CurrentWeaponPartType == WeaponPartType.Stat)
@@ -175,7 +186,6 @@ public class WeaponEquipmentUI : MonoBehaviour
 
     internal void ReleasedEquipmentPart(int id, WeaponPartType type, WeaponEquipmentPart weaponEquipmentPart)
     {
-        Debug.Log(id + "  " + type);
         if (Vector2.Distance(weaponEquipmentPart.transform.position, StatSlot.transform.position) <= DragThreshHold && type == WeaponPartType.Stat)
         {
             StatSlot.transform.DetachChildren();
@@ -183,7 +193,7 @@ public class WeaponEquipmentUI : MonoBehaviour
             weaponEquipmentPart.transform.localPosition = Vector3.zero;
             weaponEquipmentPart.transform.localScale = Vector3.one * 3;
             Weapon.StatEquipmentPart = StatEquipmentParts[id];
-            weaponEquipmentPart.WeaponPartImage.raycastTarget = false;
+            weaponEquipmentPart.Disable();
 
         }
         else if (Vector2.Distance(weaponEquipmentPart.transform.position, BulletSlot.transform.position) <= DragThreshHold && type == WeaponPartType.Bullet)
@@ -193,7 +203,7 @@ public class WeaponEquipmentUI : MonoBehaviour
             weaponEquipmentPart.transform.localPosition = Vector3.zero;
             weaponEquipmentPart.transform.localScale = Vector3.one * 3;
             Weapon.BulletEquipmentPart = BulletEquipmentParts[id];
-            weaponEquipmentPart.WeaponPartImage.raycastTarget = false;
+            weaponEquipmentPart.Disable();
 
         }
         else if (Vector2.Distance(weaponEquipmentPart.transform.position, ImpactSlot.transform.position) <= DragThreshHold && type == WeaponPartType.Impact)
@@ -203,7 +213,7 @@ public class WeaponEquipmentUI : MonoBehaviour
             weaponEquipmentPart.transform.localPosition = Vector3.zero;
             weaponEquipmentPart.transform.localScale = Vector3.one * 3;
             Weapon.ImpactEquipmentPart = ImpactEquipmentParts[id];
-            weaponEquipmentPart.WeaponPartImage.raycastTarget = false;
+            weaponEquipmentPart.Disable();
 
         }
         else

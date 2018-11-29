@@ -54,6 +54,7 @@ MonoBehaviour:
   WeaponPartSprite: {fileID: 21300000, guid: db54027c8898cca458a1463f8c478c6e, type: 3}
   WeaponPartType: 2
   EquipmentUi: {fileID: 0}
+  FlameColor: {r: 0.07843137, g: 1, b: 0.5252378, a: 1}
   Id: 3
   Name: Toxic
   WeaponPartImage: {fileID: 0}

@@ -54,6 +54,7 @@ MonoBehaviour:
   WeaponPartSprite: {fileID: 21300000, guid: 7d56cc7cb8de6df4786ae9fd7035b959, type: 3}
   WeaponPartType: 2
   EquipmentUi: {fileID: 0}
+  FlameColor: {r: 0.08018869, g: 0.94068456, b: 1, a: 1}
   Id: 2
   Name: Ice
   WeaponPartImage: {fileID: 0}

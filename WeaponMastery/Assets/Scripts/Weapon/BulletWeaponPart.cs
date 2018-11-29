@@ -26,7 +26,7 @@ public class BulletWeaponPart : WeaponEquipmentPart
 public enum ModEffect
 {
     Fire,
-    Explosion,
     Toxic,
-    Ice
+    Ice,
+    Lightning
 }

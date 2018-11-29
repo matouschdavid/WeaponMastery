@@ -6,9 +6,9 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
 
-    public SpriteRenderer StatSprite;
-    public SpriteRenderer BulletSprite;
-    public SpriteRenderer ImpactSprite;
+    public ParticleSystem Flame;
+
+    public Gradient BasicGradient;
 
     public StatWeaponPart StatEquipmentPart;
 
@@ -19,6 +19,8 @@ public class Weapon : MonoBehaviour
     public Transform FirePosition;
 
     private float lastFire = 0;
+
+    public bool CanShoot = true;
 	// Use this for initialization
 	void Start () {
 		
@@ -28,7 +30,7 @@ public class Weapon : MonoBehaviour
 	void Update ()
 	{
 	    lastFire += Time.deltaTime;
-	    if (Input.GetMouseButton(0) && lastFire >= StatEquipmentPart.AttackSpeed)
+	    if (Input.GetMouseButton(0) && lastFire >= StatEquipmentPart.AttackSpeed && CanShoot)
 	    {
 	        lastFire = 0;
 	        Shoot();
@@ -43,8 +45,13 @@ public class Weapon : MonoBehaviour
 
     public void UpdateWeapon()
     {
-        StatSprite.sprite = StatEquipmentPart.WeaponPartSprite;
-        BulletSprite.sprite = BulletEquipmentPart.WeaponPartSprite;
-        ImpactSprite.sprite = ImpactEquipmentPart.WeaponPartSprite;
+        Gradient gradient = BasicGradient;
+        //Debug.Log(BulletEquipmentPart.FlameColor);
+        gradient.colorKeys[0] = new GradientColorKey(BulletEquipmentPart.FlameColor, gradient.colorKeys[0].time);
+        gradient.colorKeys[1] = new GradientColorKey(ImpactEquipmentPart.FlameColor, gradient.colorKeys[1].time);
+        gradient.SetKeys(new GradientColorKey[] { new GradientColorKey(BulletEquipmentPart.FlameColor, gradient.colorKeys[0].time), new GradientColorKey(ImpactEquipmentPart.FlameColor, gradient.colorKeys[1].time)}, gradient.alphaKeys);
+        var colorModule = Flame.colorOverLifetime;
+        colorModule.color = gradient;
+        //BasicGradient = gradient;
     }
 }

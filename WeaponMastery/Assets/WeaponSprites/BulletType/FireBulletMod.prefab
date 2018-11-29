@@ -54,6 +54,7 @@ MonoBehaviour:
   WeaponPartSprite: {fileID: 21300000, guid: 70465c3a0c260f24b8785da73ba07b9a, type: 3}
   WeaponPartType: 1
   EquipmentUi: {fileID: 0}
+  FlameColor: {r: 1, g: 0.3419886, b: 0, a: 1}
   Id: 0
   Name: Fire
   WeaponPartImage: {fileID: 0}

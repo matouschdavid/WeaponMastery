@@ -152,6 +152,7 @@ MonoBehaviour:
   WeaponPartSprite: {fileID: 0}
   WeaponPartType: 0
   EquipmentUi: {fileID: 0}
+  FlameColor: {r: 0, g: 0, b: 0, a: 0}
   Id: 0
   Name: 
   WeaponPartImage: {fileID: 114526676984263260}
