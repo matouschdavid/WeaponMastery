@@ -54,8 +54,9 @@ MonoBehaviour:
   WeaponPartSprite: {fileID: 21300000, guid: 8029681b3a5c191458d10d388027f171, type: 3}
   WeaponPartType: 0
   EquipmentUi: {fileID: 0}
+  FlameColor: {r: 0, g: 0, b: 0, a: 0}
   Id: 0
   Name: Attackdamage
   WeaponPartImage: {fileID: 0}
-  AttackSpeed: 0.3
+  AttackSpeed: 0.5
   AttackDamage: 20

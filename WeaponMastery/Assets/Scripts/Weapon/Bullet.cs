@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        Destroy(gameObject, 3);
     }
 
     public void Fire(ModEffect effect, float speed, float damage, ImpactWeaponPart impact = null, Collider2D enemy = null)
@@ -25,14 +25,14 @@ public class Bullet : MonoBehaviour
         this.speed = speed;
         enemyHitWithBullet = enemy;
         this.damage = damage;
-        Debug.Log(speed);
-        rb.AddForce(transform.up * speed);
+        rb.velocity = transform.right * speed;
     }
 
 
     void OnCollisionEnter2D(Collision2D collision2D)
     {
-
+        if (collision2D.gameObject.tag == "Player")
+            return;
         if (collision2D.gameObject.tag == "Enemy")
         {
             GetComponent<Collider2D>().enabled = false;
@@ -52,9 +52,7 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider2D)
     {
-        Debug.Log(collider2D.Equals(enemyHitWithBullet));
-        Debug.Log(enemyHitWithBullet);
-        if (collider2D.Equals(enemyHitWithBullet))
+        if (collider2D.gameObject.tag == "Player")
             return;
         if (collider2D.gameObject.tag == "Enemy")
         {
@@ -68,9 +66,8 @@ public class Bullet : MonoBehaviour
             if (effect == ModEffect.Ice)
                 StartCoroutine(DamageEffects.IceDamage(this, damage, 2,
                     collider2D.gameObject.GetComponent<HealthController>(), collider2D.gameObject.GetComponent<EnemyController>()));
-
+            impact.OnFire(collider2D.transform, damage * 0.8f, speed * 0.2f, collider2D);
         }
-
         Destroy(gameObject);
     }
 }

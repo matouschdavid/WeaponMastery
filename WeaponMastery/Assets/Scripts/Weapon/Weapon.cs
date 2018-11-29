@@ -19,6 +19,7 @@ public class Weapon : MonoBehaviour
     public Transform FirePosition;
 
     private float lastFire = 0;
+    private DateTime lastFireDate;
 
     public bool CanShoot = true;
 	// Use this for initialization
@@ -39,8 +40,22 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
-        Debug.Log("Weapondamage: " + StatEquipmentPart.AttackDamage);
-        BulletEquipmentPart.OnFire(FirePosition, StatEquipmentPart.AttackDamage, ImpactEquipmentPart);
+        Flame.gameObject.SetActive(false);
+        Flame.gameObject.SetActive(true);
+        var m = Flame.main;
+        m.simulationSpeed = 2;
+        lastFireDate = DateTime.Now;
+        Invoke("ResetSimSpeed",StatEquipmentPart.AttackSpeed);
+        BulletEquipmentPart.OnFire(FirePosition, transform.parent.GetComponent<WeaponMouseFacing>().Direction, StatEquipmentPart.AttackDamage, ImpactEquipmentPart, BasicGradient);
+    }
+
+    private void ResetSimSpeed()
+    {
+        if ((DateTime.Now - lastFireDate).Seconds <= StatEquipmentPart.AttackSpeed / 2)
+            return;
+           
+        var m = Flame.main;
+        m.simulationSpeed = 1;
     }
 
     public void UpdateWeapon()
@@ -52,6 +67,6 @@ public class Weapon : MonoBehaviour
         gradient.SetKeys(new GradientColorKey[] { new GradientColorKey(BulletEquipmentPart.FlameColor, gradient.colorKeys[0].time), new GradientColorKey(ImpactEquipmentPart.FlameColor, gradient.colorKeys[1].time)}, gradient.alphaKeys);
         var colorModule = Flame.colorOverLifetime;
         colorModule.color = gradient;
-        //BasicGradient = gradient;
+        BasicGradient = gradient;
     }
 }
