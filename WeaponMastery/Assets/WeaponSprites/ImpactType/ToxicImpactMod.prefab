@@ -55,10 +55,10 @@ MonoBehaviour:
   WeaponPartType: 2
   EquipmentUi: {fileID: 0}
   FlameColor: {r: 0.07843137, g: 1, b: 0.5252378, a: 1}
-  Id: 3
+  Id: 0
   Name: Toxic
   WeaponPartImage: {fileID: 0}
   Effect: 2
-  ParticleEffect: {fileID: 1526685530921936, guid: bee86f7d0573bd642945aa31fca4d799,
+  ParticleEffect: {fileID: 1090478478786626, guid: 8c9f8776a1fed014dbf5cff039478001,
     type: 2}
   EffectSprite: {fileID: 21300000, guid: 3444f66160240a940b6812310913ad9b, type: 3}

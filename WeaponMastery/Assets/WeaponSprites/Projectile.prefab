@@ -91,7 +91,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impact: {fileID: 0}
-  enemyHitWithBullet: {fileID: 0}
 --- !u!198 &198696089049391156
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -4661,7 +4660,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 150
+  m_SortingOrder: -94
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0

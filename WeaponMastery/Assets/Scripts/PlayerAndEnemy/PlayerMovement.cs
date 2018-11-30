@@ -56,11 +56,12 @@ public class PlayerMovement : MonoBehaviour {
 
         #region Movement(x,y)
 
-        if (!isInDash) {
-
-            rb.MovePosition(rb.position + moveInput * RunSpeed * Time.fixedDeltaTime);
+        if (!isInDash)
+        {
+            rb.velocity = moveInput * RunSpeed;
         }
 
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y * 0.01f);
         #endregion
     }
 }

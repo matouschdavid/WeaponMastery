@@ -19,7 +19,7 @@ public class BulletWeaponPart : WeaponEquipmentPart
     public void OnFire(Transform firePosition, float direction, float damage, ImpactWeaponPart impact, Gradient flameColor)
     {
         GameObject bullet = Instantiate(Bullet, firePosition.position, Quaternion.Euler(0,0,direction));
-        bullet.GetComponent<Bullet>().Fire(Effect, BulletSpeed, damage, impact);
+        bullet.GetComponent<Bullet>().Fire(Effect, BulletSpeed, damage, impact, flameColor);
         var module = bullet.GetComponent<ParticleSystem>().colorOverLifetime;
         module.color = flameColor;
         

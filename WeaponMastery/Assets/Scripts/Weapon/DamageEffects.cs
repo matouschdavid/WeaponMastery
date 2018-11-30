@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageEffects : MonoBehaviour
 {
     private static float damagettl = 0.3f;
-    public static IEnumerator FireDamage(Bullet bullet, float damage, int ticks, float ticksInterval, HealthController target)
+    public static IEnumerator FireDamage(MonoBehaviour bullet, float damage, int ticks, float ticksInterval, HealthController target)
     {
         for (int i = 0; i < ticks; i++)
         {
@@ -19,7 +19,7 @@ public class DamageEffects : MonoBehaviour
         Destroy(bullet.gameObject);
     }
 
-    public static IEnumerator IceDamage(Bullet bullet, float damage, float stunDuration, HealthController targetHealth, EnemyController targetController)
+    public static IEnumerator IceDamage(MonoBehaviour bullet, float damage, float stunDuration, HealthController targetHealth, EnemyController targetController)
     {
         targetHealth.Health -= damage;
         GameObject t = Instantiate<GameObject>(Resources.Load<GameObject>("DamageText"), targetHealth.transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0), Quaternion.identity);
@@ -32,7 +32,7 @@ public class DamageEffects : MonoBehaviour
         Destroy(bullet.gameObject);
     }
 
-    public static IEnumerator ToxicDamage(Bullet bullet, float damage, int ticks, float ticksInterval, HealthController target)
+    public static IEnumerator ToxicDamage(MonoBehaviour bullet, float damage, int ticks, float ticksInterval, HealthController target)
     {
         for (int i = 0; i < ticks; i++)
         {

@@ -61,9 +61,6 @@ public class Weapon : MonoBehaviour
     public void UpdateWeapon()
     {
         Gradient gradient = BasicGradient;
-        //Debug.Log(BulletEquipmentPart.FlameColor);
-        gradient.colorKeys[0] = new GradientColorKey(BulletEquipmentPart.FlameColor, gradient.colorKeys[0].time);
-        gradient.colorKeys[1] = new GradientColorKey(ImpactEquipmentPart.FlameColor, gradient.colorKeys[1].time);
         gradient.SetKeys(new GradientColorKey[] { new GradientColorKey(BulletEquipmentPart.FlameColor, gradient.colorKeys[0].time), new GradientColorKey(ImpactEquipmentPart.FlameColor, gradient.colorKeys[1].time)}, gradient.alphaKeys);
         var colorModule = Flame.colorOverLifetime;
         colorModule.color = gradient;
